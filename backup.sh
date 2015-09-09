@@ -15,8 +15,8 @@ DESTFILE="$BACKUP_DST/$NOW.tgz"
 mysqldump -u $MYSQL_USER -h $MYSQL_SERVER -p$MYSQL_PASS --all-databases > "$NOW-Databases.sql"
 tar cfz "$DESTFILE" $BACKUP_SRC "$NOW-Databases.sql"
 
-#upload to dropbox. make sure the following line points to the correct dropbox_uploader.sh location
+# Upload to dropbox. Make sure the following line points to the correct dropbox_uploader.sh location.
 /root/dropbox_uploader.sh upload "$DESTFILE" "$NOW.tgz"
 
-#remove temporary files
+# Remove temporary files.
 rm -f "$NOW-Databases.sql" "$DESTFILE"
