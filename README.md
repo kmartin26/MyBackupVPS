@@ -7,11 +7,11 @@ Note: I usually place it to the root folder.
 
 First you need cURL on your VPS/Dedicated.
 
-- sudo apt-get install curl
+- apt-get install curl
 
 Edit the backup.sh to feet your needs.
 
-- sudo nano backup.sh
+- nano backup.sh
 
 Then, we apply execution permissions on both scripts.
 
